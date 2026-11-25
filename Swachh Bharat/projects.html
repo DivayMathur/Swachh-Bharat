@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from https://swachbharat.netlify.app/projects by HTTrack Website Copier/3.x [XR&CO], Sun, 15 Nov 2026 09:40:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=a7c52df8-b4ee-4127-8add-ebae86c686c9
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our campaigns and projects making India cleaner. Join school programs, street drives, and recycling initiatives.">
+    <title>Projects & Campaigns | Swachh Bharat</title>
+    
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: { DEFAULT: '#FF7A00', 600: '#FF5722' },
+                        evergreen: '#0B6B52',
+                        offwhite: '#FEFDF6',
+                        warmgray: '#6B6B6B',
+                        indigo: '#2B3A67'
+                    },
+                    fontFamily: {
+                        display: ['Mukta', 'sans-serif'],
+                        body: ['Noto Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-offwhite text-warmgray">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Swachh Bharat Logo">
+                        <rect width="40" height="13.33" fill="#FF7A00"/>
+                        <rect y="13.33" width="40" height="13.33" fill="#FFFFFF"/>
+                        <rect y="26.66" width="40" height="13.34" fill="#0B6B52"/>
+                        <path d="M20 8 L25 28 L15 28 Z" fill="#2B3A67" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="font-display text-xl font-bold text-indigo">Swachh Bharat</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a class='nav-link hover:text-saffron transition-colors' href='index.html'>Home</a>
+                <a class='nav-link hover:text-saffron transition-colors' href='about.html'>About</a>
+                <a class='nav-link text-indigo font-medium' href='projects.html'>Projects</a>
+                <a class='nav-link hover:text-saffron transition-colors' href='volunteer.html'>Volunteer</a>
+                <a class='nav-link hover:text-saffron transition-colors' href='gallery.html'>Gallery</a>
+                <a class='nav-link hover:text-saffron transition-colors' href='resources.html'>Resources</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a class='btn-primary hidden md:inline-block' href='volunteer.html'>Join a Drive</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 space-y-3">
+                <a class='block hover:text-saffron transition-colors' href='index.html'>Home</a>
+                <a class='block hover:text-saffron transition-colors' href='about.html'>About</a>
+                <a class='block text-indigo font-medium' href='projects.html'>Projects</a>
+                <a class='block hover:text-saffron transition-colors' href='volunteer.html'>Volunteer</a>
+                <a class='block hover:text-saffron transition-colors' href='gallery.html'>Gallery</a>
+                <a class='block hover:text-saffron transition-colors' href='resources.html'>Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-20 left-0 w-96 h-96 bg-evergreen opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl">
+                <h1 class="font-display text-5xl md:text-6xl font-bold text-indigo mb-6">
+                    Active Projects &<br>
+                    <span class="text-saffron">Community Campaigns</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-warmgray leading-relaxed">
+                    From school programs to street cleanups, discover ongoing initiatives making real impact across India.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="pb-12 bg-offwhite">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button class="filter-button active" data-filter="all">All Projects</button>
+                <button class="filter-button" data-filter="school">School Programs</button>
+                <button class="filter-button" data-filter="street">Street Cleanups</button>
+                <button class="filter-button" data-filter="recycling">Recycling</button>
+                <button class="filter-button" data-filter="water">Water Bodies</button>
+                <button class="filter-button" data-filter="awareness">Awareness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 - Emphasized -->
+                <div class="project-card hover-lift" data-category="school street" data-project="1">
+                    <div class="relative h-64 bg-gradient-to-br from-saffron to-saffron-600 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="badge bg-white text-saffron-600 px-3 py-1 rounded-full text-xs font-bold">Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-primary">School</span>
+                            <span class="badge badge-info">Street</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">Street-to-School Initiative</h3>
+                        <p class="text-warmgray mb-4">
+                            Connecting local cleanup drives with educational workshops in 45 schools. Teaching waste segregation and environmental responsibility.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">78%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">850+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card hover-lift" data-category="water" data-project="2">
+                    <div class="relative h-64 bg-gradient-to-br from-evergreen to-green-700 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-white text-evergreen px-3 py-1 rounded-full text-xs font-bold">Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-success">Water Bodies</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">River Revival Project</h3>
+                        <p class="text-warmgray mb-4">
+                            Monthly riverbank cleanup campaigns with water quality monitoring. Removing plastic waste and restoring aquatic ecosystems.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">62%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 62%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">320+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card hover-lift" data-category="school recycling" data-project="3">
+                    <div class="relative h-64 bg-gradient-to-br from-indigo to-blue-700 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-white text-indigo px-3 py-1 rounded-full text-xs font-bold">Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-info">School</span>
+                            <span class="badge badge-success">Recycling</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">Plastic-Free Campus</h3>
+                        <p class="text-warmgray mb-4">
+                            Eliminating single-use plastics in educational institutions. Installing water stations and promoting reusable alternatives.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">1,200+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card hover-lift" data-category="recycling" data-project="4">
+                    <div class="relative h-64 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold">New</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-success">Recycling</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">Community Composting</h3>
+                        <p class="text-warmgray mb-4">
+                            Teaching organic waste management to neighborhoods. Setting up community composting centers for sustainable waste disposal.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">45%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">180+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card hover-lift" data-category="street" data-project="5">
+                    <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-600 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-white text-purple-600 px-3 py-1 rounded-full text-xs font-bold">Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-info">Street</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">Weekend Warriors</h3>
+                        <p class="text-warmgray mb-4">
+                            Every Saturday morning, volunteers gather to clean public spaces, parks, and marketplaces in their neighborhoods.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">92%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">640+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card hover-lift" data-category="awareness" data-project="6">
+                    <div class="relative h-64 bg-gradient-to-br from-red-500 to-pink-500 rounded-t-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-white text-red-600 px-3 py-1 rounded-full text-xs font-bold">Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-b-2xl">
+                        <div class="flex gap-2 mb-3">
+                            <span class="badge badge-primary">Awareness</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-indigo mb-3">Clean India Ambassadors</h3>
+                        <p class="text-warmgray mb-4">
+                            Training student leaders to spread awareness about cleanliness and environmental responsibility in their communities.
+                        </p>
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-warmgray">Progress</span>
+                                    <span class="font-semibold text-evergreen">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-sm">
+                                <svg class="w-5 h-5 text-saffron" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                <span class="font-semibold text-evergreen">420+ volunteers</span>
+                            </div>
+                            <button class="text-saffron hover:text-saffron-600 font-semibold flex items-center gap-1 view-details">
+                                Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="hidden modal-overlay">
+        <div class="modal-content max-w-4xl">
+            <div class="p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h2 id="modal-title" class="font-display text-3xl font-bold text-indigo mb-2">Project Title</h2>
+                        <div id="modal-badges" class="flex gap-2"></div>
+                    </div>
+                    <button id="close-modal" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div id="modal-content">
+                    <!-- Content will be dynamically inserted -->
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <a class='btn-primary' href='volunteer.html'>Join This Project</a>
+                    <button id="share-project" class="btn-secondary">Share Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo text-gray-200 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-display text-xl font-bold text-white mb-4">Swachh Bharat</h4>
+                    <p class="text-sm">A student-driven initiative to make India cleaner, one street at a time.</p>
+                </div>
+                <div>
+                    <h5 class="font-display font-bold text-white mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class='hover:text-saffron transition-colors' href='about.html'>About Us</a></li>
+                        <li><a class='hover:text-saffron transition-colors' href='projects.html'>Our Projects</a></li>
+                        <li><a class='hover:text-saffron transition-colors' href='volunteer.html'>Volunteer</a></li>
+                        <li><a class='hover:text-saffron transition-colors' href='gallery.html'>Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-display font-bold text-white mb-4">Resources</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class='hover:text-saffron transition-colors' href='resources.html'>Download Guides</a></li>
+                        <li><a class='hover:text-saffron transition-colors' href='resources.html#checklists'>Checklists</a></li>
+                        <li><a class='hover:text-saffron transition-colors' href='resources.html#contact'>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-display font-bold text-white mb-4">Connect</h5>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-saffron transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-saffron transition-colors" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-saffron transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; 2025 Swachh Bharat Initiative. A student project for Clean India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/projects.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+<!-- Mirrored from https://swachbharat.netlify.app/projects by HTTrack Website Copier/3.x [XR&CO], Sun, 15 Nov 2026 09:41:00 GMT -->
+</html>
